@@ -6,7 +6,7 @@
     <title>Денис & Елизавета | Свадьба</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -15,10 +15,11 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background: #f8f4ef;
-            color: #2d241a;
-            line-height: 1.6;
+            font-family: 'Cormorant Garamond', serif;
+            background: #f5efe8;
+            color: #3d3229;
+            line-height: 1.7;
+            font-weight: 400;
         }
 
         .container {
@@ -27,147 +28,191 @@
             padding: 2rem 1.5rem;
         }
 
+        /* === ВИНТАЖНЫЙ ХЕРО === */
         .hero {
-            background: linear-gradient(145deg, #d9e6d4 0%, #bdd0b0 100%);
+            background: linear-gradient(165deg, #e8ddd0 0%, #d4c5b2 100%);
             min-height: 72vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            border-radius: 0 0 40px 40px;
+            border-radius: 0 0 50px 50px;
             padding: 2.5rem 2rem;
             position: relative;
             overflow: hidden;
+            border-bottom: 3px solid #c4b09a;
         }
 
         .hero::before {
-            content: "🌿";
-            font-size: 10rem;
-            opacity: 0.12;
+            content: "✧";
+            font-size: 12rem;
+            opacity: 0.08;
             position: absolute;
-            bottom: -30px;
-            right: -30px;
-            transform: rotate(10deg);
+            bottom: -40px;
+            right: -20px;
+            font-family: serif;
+            color: #6b5a48;
         }
 
         .hero::after {
-            content: "🌲";
-            font-size: 6rem;
-            opacity: 0.08;
+            content: "❧";
+            font-size: 8rem;
+            opacity: 0.07;
             position: absolute;
             top: 20px;
             left: 20px;
+            color: #6b5a48;
+            transform: rotate(-15deg);
+        }
+
+        .hero .ornament {
+            font-size: 1.8rem;
+            letter-spacing: 12px;
+            color: #8a7a66;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .hero .subtitle {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: #6b5a48;
+            margin-bottom: 0.2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: 4.2rem;
             font-weight: 700;
-            letter-spacing: 4px;
-            color: #1f3a1d;
-            margin-bottom: 0.3rem;
+            letter-spacing: 6px;
+            color: #3d2e1e;
+            margin: 0.2rem 0 0.5rem;
             position: relative;
+            font-style: italic;
         }
 
-        .hero .subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 6px;
-            color: #2f542a;
-            margin-bottom: 0.8rem;
-            text-transform: uppercase;
+        .hero h1 .ampersand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.8rem;
+            color: #7a6652;
+            margin: 0 0.3rem;
         }
 
         .hero .date-big {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            background: rgba(255, 255, 255, 0.65);
-            backdrop-filter: blur(6px);
-            padding: 0.8rem 2.8rem;
-            border-radius: 60px;
+            font-size: 2rem;
+            background: rgba(255, 252, 248, 0.6);
+            backdrop-filter: blur(4px);
+            padding: 0.6rem 2.8rem;
+            border-radius: 4px;
             display: inline-block;
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            margin-top: 1rem;
-            color: #1f3a1d;
+            border: 1px solid rgba(180, 160, 140, 0.5);
+            margin-top: 0.8rem;
+            color: #4d3b2a;
+            letter-spacing: 4px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
 
         .hero .location-hero {
-            margin-top: 1.2rem;
+            margin-top: 1rem;
             font-weight: 300;
-            font-size: 1.15rem;
-            letter-spacing: 2px;
-            background: rgba(255,255,255,0.3);
-            padding: 0.4rem 1.8rem;
-            border-radius: 40px;
-            backdrop-filter: blur(2px);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            background: rgba(255, 252, 248, 0.4);
+            padding: 0.4rem 2rem;
+            border-radius: 4px;
+            border: 1px solid rgba(180, 160, 140, 0.3);
+            font-family: 'Cormorant Garamond', serif;
+            color: #5a4a38;
         }
 
+        /* Таймер */
         .timer-wrap {
             display: flex;
             gap: 1.8rem;
             justify-content: center;
-            margin-top: 1.8rem;
+            margin-top: 2rem;
             flex-wrap: wrap;
         }
 
         .timer-item {
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 252, 248, 0.5);
             backdrop-filter: blur(4px);
-            padding: 0.6rem 1.2rem;
-            border-radius: 40px;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
             min-width: 70px;
-            border: 1px solid rgba(255,255,255,0.4);
+            border: 1px solid rgba(180, 160, 140, 0.3);
         }
 
         .timer-item .num {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 700;
-            color: #1f3a1d;
+            color: #3d2e1e;
             line-height: 1.2;
         }
 
         .timer-item .label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #3d5e38;
+            letter-spacing: 3px;
+            color: #7a6a56;
             font-weight: 300;
+            font-family: 'Cormorant Garamond', serif;
         }
 
+        /* Секции */
         .section {
-            margin: 4rem 0;
+            margin: 4.5rem 0;
             text-align: center;
         }
 
         .section h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             font-weight: 400;
             margin-bottom: 1.5rem;
-            color: #1f3a1d;
+            color: #3d2e1e;
             position: relative;
             display: inline-block;
+            font-style: italic;
+        }
+
+        .section h2::before {
+            content: "❧";
+            font-size: 1.6rem;
+            color: #b8a694;
+            margin-right: 1rem;
+            font-weight: 300;
         }
 
         .section h2::after {
-            content: "";
+            content: "❧";
+            font-size: 1.6rem;
+            color: #b8a694;
+            margin-left: 1rem;
+            font-weight: 300;
+        }
+
+        .section h2 .ornament-line {
             display: block;
-            width: 50%;
-            height: 2px;
-            background: #a8bf9a;
-            margin: 0.5rem auto 0;
+            width: 80px;
+            height: 1px;
+            background: #c9bcaa;
+            margin: 0.4rem auto 0;
         }
 
         .card {
-            background: white;
-            border-radius: 24px;
+            background: rgba(255, 252, 248, 0.7);
+            border-radius: 8px;
             padding: 2.5rem 2rem;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 32px rgba(120, 100, 80, 0.08);
             margin: 2rem 0;
-            border: 1px solid #e6ddd2;
+            border: 1px solid #e2d5c6;
+            backdrop-filter: blur(2px);
         }
 
         .grid-2 {
@@ -178,39 +223,93 @@
         }
 
         .info-item {
-            background: #faf8f5;
+            background: rgba(255, 252, 248, 0.5);
             padding: 1.8rem 1rem;
-            border-radius: 20px;
-            border: 1px solid #ece3d8;
+            border-radius: 6px;
+            border: 1px solid #e6dbce;
             transition: 0.2s;
         }
 
         .info-item:hover {
-            background: #f5f0ea;
+            background: rgba(255, 252, 248, 0.8);
         }
 
         .info-item .icon {
-            font-size: 2.4rem;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
+            font-size: 1.6rem;
+            color: #6b5a48;
+            letter-spacing: 4px;
+        }
+
+        .info-item .icon svg {
+            width: 38px;
+            height: 38px;
+            fill: none;
+            stroke: #6b5a48;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         .info-item h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
-            margin-bottom: 0.4rem;
-            color: #1f3a1d;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+            color: #3d2e1e;
+            font-style: italic;
         }
 
         .info-item p {
-            color: #4d3f32;
-            font-size: 1rem;
+            color: #5a4a38;
+            font-size: 1.05rem;
+            font-weight: 300;
         }
         .info-item .small {
-            font-size: 0.85rem;
-            color: #7b6a5a;
+            font-size: 0.9rem;
+            color: #8a7a66;
+            font-style: italic;
         }
 
+        /* Программа */
+        .program-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .program-list li {
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #d9cdbe;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            font-weight: 300;
+        }
+
+        .program-list li:last-child {
+            border-bottom: none;
+        }
+
+        .program-list .time {
+            font-weight: 600;
+            color: #3d2e1e;
+            min-width: 70px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+        }
+
+        .program-list .event-icon {
+            color: #8a7a66;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            min-width: 30px;
+        }
+
+        /* RSVP */
         .rsvp-form {
             max-width: 500px;
             margin: 2rem auto 0;
@@ -223,15 +322,16 @@
             padding: 0.9rem 1.2rem;
             margin: 0.6rem 0;
             border: 1px solid #d5cbbc;
-            border-radius: 40px;
+            border-radius: 4px;
             font-size: 1rem;
-            background: white;
+            background: rgba(255, 252, 248, 0.8);
             transition: 0.2s;
-            font-family: inherit;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            color: #3d3229;
         }
 
         .rsvp-form textarea {
-            border-radius: 20px;
             min-height: 80px;
             resize: vertical;
         }
@@ -240,57 +340,67 @@
         .rsvp-form select:focus,
         .rsvp-form textarea:focus {
             outline: none;
-            border-color: #8aa87d;
-            box-shadow: 0 0 0 3px rgba(138, 168, 125, 0.25);
+            border-color: #b8a694;
+            box-shadow: 0 0 0 3px rgba(180, 160, 140, 0.15);
         }
 
         .btn {
-            background: #1f3a1d;
-            color: white;
+            background: #6b5a48;
+            color: #f5efe8;
             border: none;
             padding: 0.9rem 2.8rem;
-            border-radius: 60px;
+            border-radius: 4px;
             font-size: 1.1rem;
             font-weight: 400;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             cursor: pointer;
             transition: 0.25s;
             margin-top: 0.8rem;
             width: 100%;
-            font-family: inherit;
+            font-family: 'Cormorant Garamond', serif;
+            text-transform: uppercase;
         }
 
         .btn:hover:not(:disabled) {
-            background: #31582e;
-            transform: scale(1.02);
-            box-shadow: 0 8px 20px rgba(31, 58, 29, 0.25);
+            background: #4d3b2a;
+            transform: scale(1.01);
+            box-shadow: 0 8px 20px rgba(80, 60, 40, 0.15);
         }
 
         .btn:disabled {
-            opacity: 0.7;
+            opacity: 0.6;
             cursor: default;
         }
 
         #rsvpMessage {
             margin-top: 1.2rem;
             font-weight: 300;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             min-height: 2rem;
+            font-style: italic;
         }
 
         .footer {
             text-align: center;
             padding: 2.5rem 0 1rem;
-            color: #8f7d6b;
+            color: #8a7a66;
             font-weight: 300;
-            letter-spacing: 1px;
-            border-top: 1px solid #dfd4c7;
+            letter-spacing: 3px;
+            border-top: 1px solid #d9cdbe;
             margin-top: 3rem;
         }
 
-        .footer .hearts {
+        .footer .ornament {
+            font-size: 1.8rem;
+            letter-spacing: 14px;
+            color: #b8a694;
+        }
+
+        .footer .names {
+            font-family: 'Great Vibes', cursive;
             font-size: 1.6rem;
-            letter-spacing: 10px;
+            color: #6b5a48;
+            margin-top: 0.3rem;
         }
 
         .spinner {
@@ -298,9 +408,9 @@
             width: 20px;
             height: 20px;
             margin: 0 auto;
-            border: 3px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255, 252, 248, 0.3);
             border-radius: 50%;
-            border-top-color: white;
+            border-top-color: #f5efe8;
             animation: spin 0.8s linear infinite;
         }
 
@@ -308,20 +418,61 @@
             to { transform: rotate(360deg); }
         }
 
+        /* Карта */
+        .map-placeholder {
+            background: #e8ddd0;
+            border-radius: 6px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b5a48;
+            font-weight: 300;
+            letter-spacing: 3px;
+            font-size: 1.1rem;
+            flex-direction: column;
+            gap: 6px;
+            border: 1px solid #d4c5b2;
+        }
+
+        .directions-box {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 252, 248, 0.5);
+            border-radius: 6px;
+            text-align: left;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #4d3b2a;
+            border: 1px solid #e2d5c6;
+            font-weight: 300;
+        }
+
+        .directions-box strong {
+            font-weight: 600;
+            color: #3d2e1e;
+        }
+
         @media (max-width: 650px) {
             .hero h1 {
                 font-size: 2.8rem;
             }
+            .hero h1 .ampersand {
+                font-size: 3.2rem;
+            }
             .hero .subtitle {
-                font-size: 0.9rem;
-                letter-spacing: 4px;
+                font-size: 1.6rem;
             }
             .hero .date-big {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
                 padding: 0.5rem 1.5rem;
             }
             .section h2 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+            }
+            .section h2::before,
+            .section h2::after {
+                font-size: 1.2rem;
             }
             .grid-2 {
                 grid-template-columns: 1fr;
@@ -336,6 +487,13 @@
             .timer-item .num {
                 font-size: 1.8rem;
             }
+            .program-list {
+                font-size: 1rem;
+            }
+            .program-list .time {
+                min-width: 55px;
+                font-size: 0.9rem;
+            }
         }
 
         @media (max-width: 420px) {
@@ -345,6 +503,7 @@
             .hero {
                 min-height: 60vh;
                 border-radius: 0 0 30px 30px;
+                padding: 1.5rem 1rem;
             }
             .hero h1 {
                 font-size: 2.2rem;
@@ -353,16 +512,22 @@
                 font-size: 0.95rem;
                 padding: 0.3rem 1rem;
             }
+            .section h2 {
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="hero">
+        <div class="ornament">❧ ✦ ❧</div>
         <p class="subtitle">Сердечно приглашаем вас</p>
-        <h1>Денис &amp; Елизавета</h1>
+        <h1>
+            Денис <span class="ampersand">&amp;</span> Елизавета
+        </h1>
         <div class="date-big">19 июля 2026</div>
-        <div class="location-hero">📍 Парк-отель «Хвоя» · Иглу Эйва</div>
+        <div class="location-hero">Парк-отель «Хвоя» · Иглу Эйва</div>
 
         <div class="timer-wrap" id="timer">
             <div class="timer-item"><span class="num" id="days">--</span><div class="label">Дней</div></div>
@@ -374,31 +539,67 @@
 
     <div class="container">
 
+        <!-- Детали -->
         <section class="section">
-            <h2>Детали праздника</h2>
+            <h2>Детали праздника <span class="ornament-line"></span></h2>
             <div class="grid-2">
                 <div class="info-item">
-                    <span class="icon">📅</span>
+                    <span class="icon">
+                        <!-- Винтажный календарь -->
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                            <circle cx="12" cy="15" r="1.2"/>
+                            <circle cx="16" cy="15" r="1.2"/>
+                            <circle cx="8" cy="15" r="1.2"/>
+                        </svg>
+                    </span>
                     <h3>Дата и время</h3>
                     <p>19 июля 2026, воскресенье</p>
                     <p class="small">Сбор гостей в 14:00</p>
                 </div>
                 <div class="info-item">
-                    <span class="icon">📍</span>
+                    <span class="icon">
+                        <!-- Винтажная сосна / дерево -->
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L3 11h3v6h2v-6h8v6h2v-6h3L12 2z"/>
+                            <path d="M12 8l-3 3h2v4h2v-4h2l-3-3z"/>
+                            <circle cx="12" cy="13" r="0.8"/>
+                        </svg>
+                    </span>
                     <h3>Место</h3>
                     <p>Парк-отель «Хвоя»</p>
                     <p class="small">Иглу Эйва</p>
                     <p class="small">Бердск, Речкуновская зона отдыха, 6</p>
                 </div>
                 <div class="info-item">
-                    <span class="icon">👔</span>
+                    <span class="icon">
+                        <!-- Винтажный костюм -->
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L8 6v4l4 2 4-2V6l-4-4z"/>
+                            <path d="M8 6v4l4 2"/>
+                            <path d="M16 6v4l-4 2"/>
+                            <path d="M10 12l2 8 2-8"/>
+                            <line x1="8" y1="6" x2="16" y2="6"/>
+                            <circle cx="9" cy="8" r="0.6"/>
+                            <circle cx="15" cy="8" r="0.6"/>
+                        </svg>
+                    </span>
                     <h3>Дресс-код</h3>
                     <p>Классический</p>
                     <p class="small">Костюмы, вечерние платья, смокинги</p>
-                    <p class="small">Цветовая гамма: чёрный, белый, тёмно-синий</p>
+                    <p class="small">Будем рады видеть телпые цвета</p>
                 </div>
                 <div class="info-item">
-                    <span class="icon">💝</span>
+                    <span class="icon">
+                        <!-- Винтажное сердце -->
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-width="1.8"/>
+                            <circle cx="12" cy="12" r="1.5" fill="#6b5a48" stroke="none"/>
+                        </svg>
+                    </span>
                     <h3>Пожелания</h3>
                     <p>Ваша улыбка и тепло</p>
                     <p class="small">Конверты с тёплыми словами приветствуются</p>
@@ -406,24 +607,26 @@
             </div>
         </section>
 
+        <!-- Программа -->
         <section class="section">
-            <h2>Программа дня</h2>
-            <div class="card" style="text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
-                <ul style="list-style: none; padding: 0; font-size: 1.05rem;">
-                    <li style="padding: 0.6rem 0; border-bottom: 1px dashed #e3d8cb;">🍾 <strong>14:00</strong> — Сбор гостей, приветственный фуршет</li>
-                    <li style="padding: 0.6rem 0; border-bottom: 1px dashed #e3d8cb;">💍 <strong>15:00</strong> — Свадебная церемония на открытом воздухе</li>
-                    <li style="padding: 0.6rem 0; border-bottom: 1px dashed #e3d8cb;">📸 <strong>15:45</strong> — Фотосессия с гостями</li>
-                    <li style="padding: 0.6rem 0; border-bottom: 1px dashed #e3d8cb;">🍽️ <strong>17:00</strong> — Банкет в иглу Эйва, тосты</li>
-                    <li style="padding: 0.6rem 0; border-bottom: 1px dashed #e3d8cb;">💃 <strong>19:00</strong> — Танцы и конкурсы</li>
-                    <li style="padding: 0.6rem 0;">🎇 <strong>22:00</strong> — Вечерний фейерверк</li>
+            <h2>Программа дня <span class="ornament-line"></span></h2>
+            <div class="card" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                <ul class="program-list">
+                    <li><span class="event-icon">✦</span><span class="time">14:00</span> Сбор гостей, приветственный фуршет</li>
+                    <li><span class="event-icon">✦</span><span class="time">14:30</span> Свадебная церемония</li>
+                    <li><span class="event-icon">✦</span><span class="time">15:10</span> Фотосессия с гостями</li>
+                    <li><span class="event-icon">✦</span><span class="time">15:30</span> Банкет в иглу Эйва, тосты</li>
+                    <li><span class="event-icon">✦</span><span class="time">16:30</span> Развлечения и конкурсы</li>
+                    <li><span class="event-icon">✦</span><span class="time">18:00</span> Танцы и завершение вечера</li>
                 </ul>
             </div>
         </section>
 
+        <!-- RSVP -->
         <section class="section" id="rsvp">
-            <h2>Подтвердите присутствие</h2>
-            <p style="max-width: 450px; margin: 0 auto 1.5rem; color: #4d3f32;">
-                Пожалуйста, ответьте до <strong>5 июля</strong>, чтобы мы могли всё организовать идеально.
+            <h2>Подтвердите присутствие <span class="ornament-line"></span></h2>
+            <p style="max-width: 450px; margin: 0 auto 1.5rem; color: #5a4a38; font-weight: 300; font-size: 1.1rem;">
+                Пожалуйста, ответьте до <strong style="font-weight: 600; color: #3d2e1e;">11 июля</strong>, чтобы мы могли всё организовать идеально.
             </p>
             <div class="card rsvp-form">
                 <form id="rsvpForm">
@@ -440,11 +643,11 @@
 
                     <select id="willCome" required>
                         <option value="">Вы придёте?</option>
-                        <option value="yes">✨ Конечно, ждём не дождёмся!</option>
-                        <option value="no">😔 К сожалению, не сможем</option>
+                        <option value="yes">✦ Конечно, ждём не дождёмся!</option>
+                        <option value="no">☽ К сожалению, не сможем</option>
                     </select>
 
-                    <textarea id="dietary" placeholder="🍽️ Диетические предпочтения (аллергии, вегетарианство, что не едите и т.д.)"></textarea>
+                    <textarea id="dietary" placeholder="Диетические предпочтения (аллергии, вегетарианство, что не едите)"></textarea>
 
                     <button type="submit" class="btn" id="submitBtn">
                         <span id="btnText">Отправить ответ</span>
@@ -455,25 +658,38 @@
             </div>
         </section>
 
+        <!-- Карта -->
         <section class="section">
-            <h2>Как добраться</h2>
-            <div class="card" style="padding: 1rem;">
-                <div style="background: #e5ede0; border-radius: 20px; height: 220px; display: flex; align-items: center; justify-content: center; color: #2d4a29; font-weight: 300; letter-spacing: 2px; font-size: 1.1rem; flex-direction: column; gap: 6px;">
-                    <span>🗺️ Парк-отель «Хвоя»</span>
-                    <span style="font-size: 0.9rem;">Бердск, Речкуновская зона отдыха, 6</span>
-                    <span style="font-size: 0.8rem; opacity: 0.7;">(вставьте сюда iframe карты)</span>
+            <h2>Как добраться <span class="ornament-line"></span></h2>
+        <div class="card" style="padding: 1.5rem;">
+
+        <!-- === КАРТА (исправленный виджет) === -->
+        <div style="border-radius: 6px; overflow: hidden; border: 1px solid #d4c5b2; filter: sepia(0.2) saturate(0.7); position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #e8ddd0;">
+            <iframe 
+                src="https://yandex.com/map-widget/v1/?ll=83.107678%2C54.794376&mode=search&oid=11665481895&ol=biz&z=16.16" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <!-- === КОНЕЦ КАРТЫ === -->
+
+        <!-- Ваш текст-подсказка -->
+        <div class="directions-box">
+            <strong style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem;">🚗 Как найти ресторан и иглу «Эйва»:</strong><br />
+                    От центрального входа в термы хвои поверните <strong>налево</strong> и следуйте до конца парковки. 
+                    Там будет <strong>поворот направо</strong> — выезд в лес. 
+                    Езжайте прямо вниз по дороге, ресторан будет прямо перед вами. 
+                    Иглу <strong>«Эйва»</strong> находится рядом с рестораном.
                 </div>
-                <p style="margin-top: 1rem; font-size: 0.95rem; color: #4d3f32;">
-                    🚗 Большая парковка на территории отеля.<br />
-                    🚌 От автовокзала Бердска — маршрутное такси до остановки «Речкуновская зона отдыха».
-                </p>
             </div>
         </section>
 
         <footer class="footer">
-            <div class="hearts">🌿 💚 🌿</div>
-            <p style="margin-top: 0.5rem;">С нетерпением ждём вас в этот особенный день!</p>
-            <p style="font-size: 0.8rem; margin-top: 1rem; letter-spacing: 2px;">Денис &amp; Елизавета</p>
+            <div class="ornament">❧ ✦ ❧ ✦ ❧</div>
+            <p style="margin-top: 0.8rem; font-size: 1rem; letter-spacing: 2px; color: #7a6a56;">
+                С нетерпением ждём вас в этот особенный день
+            </p>
+            <div class="names">Денис &amp; Елизавета</div>
         </footer>
 
     </div>
@@ -533,32 +749,29 @@
             const btnText = document.getElementById('btnText');
             const spinner = document.getElementById('spinner');
 
-            // Проверка обязательных полей
             if (!name || !count || !willCome) {
                 messageDiv.style.color = '#b15341';
                 messageDiv.textContent = '⚠️ Пожалуйста, заполните все обязательные поля.';
                 return;
             }
 
-            // Блокируем кнопку и показываем спиннер
             submitBtn.disabled = true;
             btnText.textContent = 'Отправка...';
             spinner.style.display = 'inline-block';
 
-            // Формируем сообщение для Telegram
-            const statusEmoji = willCome === 'yes' ? '✅' : '❌';
+            const statusEmoji = willCome === 'yes' ? '✦' : '☽';
             const statusText = willCome === 'yes' ? 'Придёт' : 'Не придёт';
             
             let message = `
-📩 <b>Новый ответ с сайта!</b>
+📩 Новый ответ с сайта!
 
-👤 <b>Имя:</b> ${name}
-👥 <b>Гостей:</b> ${count}
-${statusEmoji} <b>Статус:</b> ${statusText}
+👤 Имя: ${name}
+👥 Гостей: ${count}
+${statusEmoji} Статус: ${statusText}
             `;
 
             if (dietary) {
-                message += `\n🍽️ <b>Диетические предпочтения:</b> ${dietary}`;
+                message += `\n🍽️ Диетические предпочтения: ${dietary}`;
             }
 
             message += `
@@ -583,25 +796,25 @@ ${statusEmoji} <b>Статус:</b> ${statusText}
                 const data = await response.json();
 
                 if (data.ok) {
-                    messageDiv.style.color = '#31582e';
+                    messageDiv.style.color = '#6b5a48';
                     if (willCome === 'yes') {
-                        messageDiv.innerHTML = `💚 <b>${name}</b>, спасибо! Ждём вас (${count} чел.) 19 июля в «Хвое»! 💚`;
+                        messageDiv.innerHTML = `✦ <b>${name}</b>, спасибо! Ждём вас (${count} чел.) 19 июля в «Хвое»! ✦`;
                         if (dietary) {
-                            messageDiv.innerHTML += `<br /><span style="font-size: 0.9rem; opacity: 0.8;">🍽️ Учли: ${dietary}</span>`;
+                            messageDiv.innerHTML += `<br /><span style="font-size: 0.9rem; opacity: 0.7;">🍽️ Учли: ${dietary}</span>`;
                         }
                     } else {
-                        messageDiv.innerHTML = `🤍 <b>${name}</b>, нам будет очень жаль. Спасибо, что ответили! 🤍`;
+                        messageDiv.innerHTML = `☽ <b>${name}</b>, нам будет очень жаль. Спасибо, что ответили! ☽`;
                     }
                     
                     document.getElementById('guestName').disabled = true;
                     document.getElementById('guestCount').disabled = true;
                     document.getElementById('willCome').disabled = true;
                     document.getElementById('dietary').disabled = true;
-                    btnText.textContent = '✅ Отправлено';
+                    btnText.textContent = '✓ Отправлено';
                 } else {
                     console.error('Telegram error:', data);
                     messageDiv.style.color = '#b15341';
-                    messageDiv.textContent = '⚠️ Произошла ошибка при отправке. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.';
+                    messageDiv.textContent = '⚠️ Произошла ошибка при отправке. Пожалуйста, попробуйте позже.';
                     submitBtn.disabled = false;
                     btnText.textContent = 'Отправить ответ';
                     spinner.style.display = 'none';
